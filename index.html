@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#scr1").change(function f1(){
+    var scr1v = document.getElementById("scr1").value;
+    document.getElementById("scrl1").innerHTML = scr1v;
+  });
+  $("#scr2").change(function f2(){
+    var scrv2 = document.getElementById("scr2").value;
+    document.getElementById("scrl2").innerHTML = scrv2;
+  });
+  $("#scr3").change(function f3(){
+    var scrv3 = document.getElementById("scr3").value;
+    document.getElementById("scrl3").innerHTML = scrv3;
+  });
+  $("#nod1").change(function f4(){
+    var arv1 = document.getElementById("nod1").value;
+    document.getElementById("arl1").innerHTML = arv1;
+  });
+  $("#nod2").change(function f5(){
+    var arv2 = document.getElementById("nod2").value;
+    document.getElementById("arl2").innerHTML = arv2;
+  });
+  $("#nod3").change(function f6(){
+    var arv3 = document.getElementById("nod3").value;
+    document.getElementById("arl3").innerHTML = arv3;
+  });
+  $("#nod4").change(function f7(){
+    var arv4 = document.getElementById("nod4").value;
+    document.getElementById("arl4").innerHTML = arv4;
+  });
+    
+    
+    
+  $("#two").change(function f8(){
+    var ax = document.getElementById("two").checked;
+    var arv4 = parseFloat(document.getElementById("am").value);
+    if (ax == true && arv4 != 0 && isNaN(arv4) == false) {
+        document.getElementById("antrl").innerHTML = arv4;}
+    if (ax == false) {
+        document.getElementById("antrl").innerHTML = "none";}
+  });
+  $("#one").change(function f9(){
+    var bx = document.getElementById("one").checked;
+    if (bx == true) {
+        document.getElementById("antrl").innerHTML = "none";}
+  });
+  $("#am").change(function f8(){
+    var ax = document.getElementById("two").checked;
+    var arv4 = parseFloat(document.getElementById("am").value);
+    if (ax == true && arv4 != 0 && isNaN(arv4) == false) {
+        document.getElementById("antrl").innerHTML = arv4;}
+    if (ax == false) {
+        document.getElementById("antrl").innerHTML = "none";}
+  });
+    
+    
+    
+  $("#pcr1").change(function f9(){
+    var arv4 = document.getElementById("pcr1").value;
+    document.getElementById("pcrl1").innerHTML = arv4;
+  });
+  $("#pcr2").change(function f10(){
+    var arv4 = document.getElementById("pcr2").value;
+    document.getElementById("pcrl2").innerHTML = arv4;
+  });
+  $("#pcr3").change(function f11(){
+    var arv4 = document.getElementById("pcr3").value;
+    document.getElementById("pcrl3").innerHTML = arv4;
+  });
+  $("#pdb1").change(function f12(){
+    var arv4 = document.getElementById("pdb1").value;
+    document.getElementById("pdbl1").innerHTML = arv4;
+  });
+  $("#pdb2").change(function f13(){
+    var arv4 = document.getElementById("pdb2").value;
+    document.getElementById("pdbl2").innerHTML = arv4;
+  });
+  $("#pdb3").change(function f14(){
+    var arv4 = document.getElementById("pdb3").value;
+    document.getElementById("pdbl3").innerHTML = arv4;
+  });
+    
+    
+    
+  $("#sg").change(function f15(){
+    var arv4 = parseFloat(document.getElementById("sg").value);
+    var arx = document.getElementById("sgb").checked;
+    if (arx == true && isNaN(arv4) == false) {
+    document.getElementById("sgl").innerHTML = arv4;}
+    else {document.getElementById("sgl").innerHTML = "No";}
+  });
+  $("#vn").change(function f16(){
+    var arv4 = parseFloat(document.getElementById("vn").value);
+    var arxc = document.getElementById("vnb").checked;
+    if (arxc == true && isNaN(arv4) == false) {
+    document.getElementById("vnl").innerHTML = arv4;}
+    else {document.getElementById("vnl").innerHTML = "No";}
+  });
+  $("#sgb").change(function f17(){
+    var arv4 = parseFloat(document.getElementById("sg").value);
+    var arx = document.getElementById("sgb").checked;
+    if (arx == true && isNaN(arv4) == false) {
+    document.getElementById("sgl").innerHTML = arv4;}
+    else {document.getElementById("sgl").innerHTML = "No";}
+  });
+  $("#vnb").change(function f18(){
+    var arv4 = parseFloat(document.getElementById("vn").value);
+    var arxc = document.getElementById("vnb").checked;
+    if (arxc == true && isNaN(arv4) == false) {
+    document.getElementById("vnl").innerHTML = arv4;}
+    else {document.getElementById("vnl").innerHTML = "No";}
+  });
+  $("#ris").change(function f19(){
+    var arv4 = parseFloat(document.getElementById("ris").value);
+    if (isNaN(arv4) == false) {
+    document.getElementById("risl").innerHTML = arv4;}
+    else {document.getElementById("risl").innerHTML = "none";}
+  });
+});
+</script>
+<style>
+/* Copyright (C) fffvc.net 2019 
+    Invisibility Calc v3.1 last updated 06/27/2019 the official FFF invisibility calc content restricted - REGISTERED USERS ONLY; */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+   td, th {
+  text-align: left;
+    width: auto;
+        color: #000;
+}
+    .td-fff {width: 200px;}
+    .td-comp {width: 38px;}
+    
+.table {
+     border-collapse: none !important;
+     border-spacing: 0 !important;
+     border-width: 0 !important;
+     margin: 0 !important;
+     width: none !important; 
+    border: none !important;
+}
+    
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: none;
+    line-height: none;
+    vertical-align: none;
+    border-top: none
+}    
+table, .table {
+    width: auto !important;
+}
+th {
+    border-width: none !important;
+}
+
+th, td {
+    padding: 0px !important;
+}
+table, th, td {
+    border: none !important;
+}
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	--primary-c: #c23b3b;
+	--secondary-c: #fba1a1;
+	
+	--white: #FDFBFB;
+	
+	--number: #082943;	
+	--bg: var(--primary-c);
+}
+
+
+/* Basic Config
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.ul-fff {
+	list-style-type: none;
+    padding-left: 50px;
+	margin: 0;
+}
+
+.li-fff {
+	display: block;
+	position: relative;
+	padding: 20px 0px;
+}
+.li-fff1 {
+	display: block;
+	position: relative;
+	padding: 00px 0px;
+}
+
+.h2-fff {
+	margin: 10px 0;
+	font-weight: 900;
+    color: black;
+}
+
+/* Card
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.card {
+	display: flex;
+	flex-direction: column;	
+	background: var(--white);
+	padding: 20px 25px;
+	border-radius: 20px;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+    margin-left: 40px;
+    margin-bottom: 40px;
+    width: 400px;
+}
+
+    #report { width: 80%; }
+    
+    #c12 {display: none;}
+    #anthra {display: none;}
+    #c45 {display: none;}
+    #c67 {display: none;}
+    
+    #screens-and-armor { width: 80%; }
+    #munition { width: 80%; }
+    #pcr-pdb { width: 80%; }
+    #specials { width: 80%; }
+    
+/* Radio Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type=radio] {
+	position: absolute;
+	visibility: hidden;
+}
+
+.label-fff { 
+	cursor: pointer; 
+	font-weight: 400;
+    color: #000;
+}
+
+.check {
+	width: 30px; height: 30px;
+	position: absolute;
+	border-radius: 50%;
+	transition: -webkit-transform .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	transition: transform .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	transition: transform .6s cubic-bezier(0.68, -0.55, 0.27, 1.55), -webkit-transform .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Reset */
+input#one ~ .check { 
+	-webkit-transform: translate(-50px, -25px); 
+	        transform: translate(-50px, -25px); 
+	background: var(--secondary-c); 
+}
+input#two ~ .check { 
+	-webkit-transform: translate(-50px, -83px); 
+	        transform: translate(-50px, -83px); 
+	background: var(--primary-c);
+	box-shadow: 0 6px 12px rgba(33, 150, 243, 0.35);
+}
+
+/* Radio Input #1 */
+input#one:checked ~ .check { -webkit-transform: translate(-50px, 33px); transform: translate(-50px, 33px); }
+
+/* Radio Input #2  */
+input#two:checked ~ .check { -webkit-transform: translate(-50px, -25px); transform: translate(-50px, -25px); }
+
+/* Ncode alpha*/
+#screens {
+    background: linear-gradient(-45deg, #fc61fe, #ff7d00, #1fa9ff, #999999, #fffb00);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;
+}
+#armor {
+    background: linear-gradient(-45deg, #e2dde6, #6a6363);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;
+    }
+#screens-and-armor {
+    background: linear-gradient(-45deg, #fc61fe, #ff7d00, #1fa9ff, #999999, #fffb00, #e2dde6, #6a6363);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;
+}
+#segfault {
+    background: linear-gradient(-45deg, #a0b9a0, #646663);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;  
+    }
+#specials {
+    background: linear-gradient(-45deg, #a0b9a0, #646663);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;  
+    }
+#anthra {
+    padding-left: 70px !important;
+    background: linear-gradient(-45deg, #fc61fe, #ff7d00);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;  
+    }
+#munition {
+    background: linear-gradient(-45deg, #fc61fe, #ff7d00);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;  
+    }
+#report {
+    background: linear-gradient(-45deg, #8fa68f, #5af50c);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;  
+    }
+#pcr-pdb {
+    background: linear-gradient(-45deg, #2e5054, #516671, #95c9be);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;
+}
+#resis {
+    background: linear-gradient(-45deg, #999999, #fffb00, #1fa9ff);
+    background-size: 600%;
+    -webkit-animation: anime 10s linear infinite;
+            animation: anime 10s linear infinite;
+}
+/* NCode 1*/
+    
+input[type="number"] {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(3em + 2px);
+  margin: 0 0 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1.5em;
+  background: #fff;
+  resize: none;
+  outline: none;
+    background: #fff;
+}
+input[type="number"][required]:focus {
+  border-color: #c23b3b;
+}
+input[type="number"][required]:focus + label[placeholder]:before {
+  color: #c23b3b;
+}
+input[type="number"][required]:focus + label[placeholder]:before,
+input[type="number"][required]:valid + label[placeholder]:before {
+  transition-duration: 0.2s;
+  -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+          transform: translate(0, -1.5em) scale(0.9, 0.9);
+}
+input[type="number"][required]:invalid + label[placeholder][alt]:before {
+  content: attr(alt);
+}
+input[type="number"][required] + label[placeholder] {
+  display: block;
+  pointer-events: none;
+  line-height: 1.25em;
+  margin-top: calc(-3em - 2px);
+  margin-bottom: calc((3em - 1em) + 2px);
+}
+input[type="number"][required] + label[placeholder]:before {
+  content: attr(placeholder);
+  display: inline-block;
+  margin: 0 calc(1em + 2px);
+  padding: 0 2px;
+  color: #898989;
+  white-space: nowrap;
+  transition: 0.3s ease-in-out;
+  background-image: linear-gradient(to bottom, transparent, transparent);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+    
+/* NCode 2*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #c23b3b;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #c23b3b;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+    
+/* NCode 3*/
+.btn-fff {
+    margin-top: 10px;
+}
+body .btn-fff,
+body .btn-fff2 {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  color: rgba(255,255,255,0.9);
+  border-radius: 50px;
+  background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+  background-size: 600%;
+  -webkit-animation: anime 16s linear infinite;
+          animation: anime 16s linear infinite;
+}
+body .btn-fff2 {
+  position: absolute;
+  margin-top: 010px;
+  z-index: -1;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: 0.8;
+}
+@-webkit-keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width:1619px){
+        /* Basic Config
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+        .ul-fff {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        .li-fff {
+            display: block;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .li-fff1 {
+            display: block;
+            position: relative;
+            padding: 00px 0px;
+        }
+
+        .h2-fff {
+            margin: 10px 0;
+            font-weight: 900;
+            color: black;
+        }
+
+
+        /* Card
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .card {
+            display: flex;
+            flex-direction: column;	
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+            margin-left: 40px;
+            margin-bottom: 40px;
+            /*width: auto;*/
+        }
+    
+        #report { width: 80%; }
+
+        /* NCode 2*/
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: #c23b3b;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #c23b3b;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+}
+
+@media (max-width:1300px){
+        /* Basic Config
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+        .ul-fff {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        .li-fff {
+            display: block;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .li-fff1 {
+            display: block;
+            position: relative;
+            padding: 00px 0px;
+        }
+
+        .h2-fff {
+            margin: 10px 0;
+            font-weight: 900;
+            color: black;
+        }
+
+
+        /* Card
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .card {
+            display: flex;
+            flex-direction: column;	
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* NCode 2*/
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: #c23b3b;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #c23b3b;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+    /* Other */
+    .btn-fff-div {
+        float: left;}
+}
+
+@media (max-width:1199px){
+        /* Basic Config
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+        .ul-fff {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        .li-fff {
+            display: block;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .li-fff1 {
+            display: block;
+            position: relative;
+            padding: 00px 0px;
+        }
+
+        .h2-fff {
+            margin: 10px 0;
+            font-weight: 900;
+            color: black;
+        }
+
+
+        /* Card
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .card {
+            display: flex;
+            flex-direction: column;	
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* NCode 2*/
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: #c23b3b;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #c23b3b;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        /* Other */
+    .btn-fff-div {
+        float: left;}
+}
+
+@media (max-width:991px){
+        /* Basic Config
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+        .ul-fff {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        .li-fff {
+            display: block;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .li-fff1 {
+            display: block;
+            position: relative;
+            padding: 00px 0px;
+        }
+
+        .h2-fff {
+            margin: 10px 0;
+            font-weight: 900;
+            color: black;
+        }
+
+
+        /* Card
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .card {
+            display: flex;
+            flex-direction: column;	
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* NCode 2*/
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: #c23b3b;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #c23b3b;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        /* Other */
+    .btn-fff-div {
+        float: left;}
+}
+
+@media (max-width:767px){
+        /* Basic Config
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+        .ul-fff {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        .li-fff {
+            display: block;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .li-fff1 {
+            display: block;
+            position: relative;
+            padding: 00px 0px;
+        }
+
+        .h2-fff {
+            margin: 10px 0;
+            font-weight: 900;
+            color: black;
+        }
+
+
+        /* Card
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .card {
+            display: flex;
+            flex-direction: column;	
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* NCode 2*/
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: #c23b3b;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #c23b3b;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        /* Other */
+    .btn-fff-div {
+        float: left;}
+}
+
+@media (max-width:600px){
+        /* Basic Config
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+        .ul-fff {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        .li-fff {
+            display: block;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .li-fff1 {
+            display: block;
+            position: relative;
+            padding: 00px 0px;
+        }
+
+        .h2-fff {
+            margin: 10px 0;
+            font-weight: 900;
+            color: black;
+        }
+
+
+        /* Card
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .card {
+            display: flex;
+            flex-direction: column;	
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+    
+        /* NCode 2*/
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: #c23b3b;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #c23b3b;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        /* Other */
+    .btn-fff-div {
+        float: left;}
+}
+
+@media (max-width:575px){
+        /* Basic Config
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+        .ul-fff {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        .li-fff {
+            display: block;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .li-fff1 {
+            display: block;
+            position: relative;
+            padding: 00px 0px;
+        }
+
+        .h2-fff {
+            margin: 10px 0;
+            font-weight: 900;
+            color: black;
+        }
+
+
+        /* Card
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .card {
+            display: flex;
+            flex-direction: column;	
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+            margin-left: 40px;
+            margin-bottom: 40px;
+        }
+    
+        /* NCode 2*/
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: #c23b3b;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #c23b3b;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        /* Other */
+    .btn-fff-div {
+        float: left;}
+    
+    #report { width: 400px; }
+    #screens-and-armor { width: 400px; }
+    #munition { width: 400px; }
+    #pcr-pdb { width: 400px; }
+    #specials { width: 400px; }
+    
+}
+
+@media (max-width:480px){
+        /* Basic Config
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+        .ul-fff {
+            list-style-type: none;
+            padding-left: 0px;
+            margin: 0;
+        }
+
+        .li-fff {
+            display: block;
+            position: relative;
+            padding: 20px 0px;
+        }
+        .li-fff1 {
+            display: block;
+            position: relative;
+            padding: 00px 0px;
+        }
+
+        .h2-fff {
+            margin: 10px 0;
+            font-weight: 900;
+            color: black;
+        }
+
+
+        /* Card
+        –––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .card {
+            display: flex;
+            flex-direction: column;	
+            background: var(--white);
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.13);
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            width: auto;
+    }
+
+        /* NCode 2*/
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+
+        input:checked + .slider {
+          background-color: #c23b3b;
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #c23b3b;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        /* Other */
+    .btn-fff-div {
+        float: left;}
+    #report { width: 400px; }
+    #screens-and-armor { width: 400px; }
+    #munition { width: 400px; }
+    #pcr-pdb { width: 400px; }
+    #specials { width: 400px; }
+}
+
+</style>
+</head>
+<body>
+    
+<div style="display: none">
+    <table>
+    <th id="compa-stat">0</th>
+    <th id="compb-stat">0</th>
+    </table>
+</div>
+
+<div class="card" id="screens-and-armor" onclick="saac()">
+    <div style="overflow: hidden;">
+        <p style="float: left !important;">Screens & Armor</p>
+        <table style="float: right !important; margin-left: 5px; border-left: 1px solid black;" class="table">
+            <tr>
+                <th style="text-align: center;">Screens lvl 1</th>
+                <th style="text-align: center;">Screens lvl 2</th>
+                <th style="text-align: center;">Screens lvl 3</th>
+                <th style="text-align: center;">Armor lvl 1</th>
+                <th style="text-align: center;">Armor lvl 2</th>
+                <th style="text-align: center;">Armor lvl 3</th>
+                <th style="text-align: center;">Armor lvl 4</th>
+            </tr>
+            <tr>
+                <th style="text-align: center;" id="scrl1">0</th>
+                <th style="text-align: center;" id="scrl2">0</th>
+                <th style="text-align: center;" id="scrl3">0</th>
+                <th style="text-align: center;" id="arl1">0</th>
+                <th style="text-align: center;" id="arl2">0</th>
+                <th style="text-align: center;" id="arl3">0</th>
+                <th style="text-align: center;" id="arl4">0</th>
+            </tr>
+        </table>
+    </div>
+</div>
+    
+<br  style="clear: both !important;">
+
+<div id="c12">
+<div class="card" id="screens" style="width: 400px !important; float: left !important;">
+	<h2 style="color: black !important; font-size: 30px !important">Screens</h2>
+	
+	<ul class="ul-fff">
+        <li> <form>
+                <input id="scr1" required='' type='number' max="4">
+                <label alt='Level 1 Screens' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="scr2" required='' type='number' max="4">
+                <label alt='Level 2 Screens' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="scr3" required='' type='number' max="4">
+                <label alt='Level 3 Screens' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li></li>
+	</ul>
+</div>
+<div class="card" id="armor" style="width: 400px !important; float: left !important;">
+	<h2 style="color: black !important; font-size: 30px !important">Node Armour</h2>
+	
+	<ul class="ul-fff">
+        <li> <form>
+                <input id="nod1" required='' type='number' max="4">
+                <label alt='Level 1 Node Armour' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="nod2" required='' type='number' max="4">
+                <label alt='Level 2 Node Armour' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="nod3" required='' type='number' max="4">
+                <label alt='Level 3 Node Armour' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="nod4" required='' type='number' max="4">
+                <label alt='Level 4 Node Armour' placeholder='Amount'></label>
+            </form>
+        </li>
+	</ul>
+</div>
+</div>
+    
+<br  style="clear: both !important;">
+
+<div class="card" id="munition" onclick="amc()">
+    <div style="overflow: hidden;">
+        <p style="float: left !important;">Anthracite Munition</p>
+        <table style="float: right !important; margin-left: 5px;" class="table">
+            <tr>
+                <th style="text-align: center;">Level</th>
+            </tr>
+            <tr>
+                <th style="text-align: center;" id="antrl">none</th>
+            </tr>
+        </table>
+    </div>
+</div>
+    
+<br  style="clear: both !important;">
+
+<div id="anthra" class="card" style="width: 360px !important;">
+	<h2 style="color: black !important; font-size: 30px !important">Anthracite Munition</h2>
+	
+	<ul class="ul-fff">
+		<li class="li-fff">
+			<input type="radio" name="name" id="one" checked />
+			<label for="one" class="label-fff">No</label>
+			
+			<div class="check"></div>
+		</li>
+		
+		<li class="li-fff">
+			<input type="radio" name="name" id="two" />
+			<label for="two" class="label-fff">Equipped</label>
+            
+			<div class="check"></div>
+		</li>
+        <li> <form>
+                <input  id="am" required='' type='number' max="3">
+                <label alt='Levels range from 1-3' placeholder='Level'></label>
+            </form>
+        </li>
+	</ul>
+</div>  
+
+<div class="card" id="pcr-pdb" onclick="pcrpdb()">
+    <div style="overflow: hidden;">
+        <p style="float: left !important;">PCR & PDB</p>
+        <table style="float: right !important; margin-left: 5px; border-left: 1px solid black;" class="table">
+            <tr>
+                <th style="text-align: center;">PCR lvl 1</th>
+                <th style="text-align: center;">PCR lvl 2</th>
+                <th style="text-align: center;">PCR lvl 3</th>
+                <th style="text-align: center;">PDB lvl 1</th>
+                <th style="text-align: center;">PDB lvl 2</th>
+                <th style="text-align: center;">PDB lvl 3</th>
+            </tr>
+            <tr>
+                <th style="text-align: center;" id="pcrl1">0</th>
+                <th style="text-align: center;" id="pcrl2">0</th>
+                <th style="text-align: center;" id="pcrl3">0</th>
+                <th style="text-align: center;" id="pdbl1">0</th>
+                <th style="text-align: center;" id="pdbl2">0</th>
+                <th style="text-align: center;" id="pdbl3">0</th>
+            </tr>
+        </table>
+    </div>
+</div>
+    
+<div id="c45">
+<div class="card" style="width: 400px !important; float: left !important;">
+	<h2 style="color: black !important; font-size: 30px !important">Phase Charge Relais</h2>
+	
+	<ul class="ul-fff">
+        <li> <form>
+                <input id="pcr1" required='' type='number' max="4">
+                <label alt='Level 1 PCR' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="pcr2" required='' type='number' max="4">
+                <label alt='Level 2 PCR' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="pcr3" required='' type='number' max="4">
+                <label alt='Level 3 PCR' placeholder='Amount'></label>
+            </form>
+        </li>
+	</ul>
+</div>
+<div class="card" style="width: 400px !important; float: left !important;">
+	<h2 style="color: black !important; font-size: 30px !important">Phase Drain Buffer</h2>
+	
+	<ul class="ul-fff">
+        <li> <form>
+                <input id="pdb1" required='' type='number' max="4">
+                <label alt='Level 1 PDB' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="pdb2" required='' type='number' max="4">
+                <label alt='Level 2 PDB' placeholder='Amount'></label>
+            </form>
+        </li>
+        <li> <form>
+                <input id="pdb3" required='' type='number' max="4">
+                <label alt='Level 3 PDB' placeholder='Amount'></label>
+            </form>
+        </li>
+	</ul>
+</div>
+</div>
+
+<br  style="clear: both !important;">
+    
+<div class="card" id="specials" onclick="spec()">
+    <div style="overflow: hidden;">
+        <p style="float: left !important;">Other</p>
+        <table style="float: right !important; margin-left: 5px; border-left: 1px solid black;" class="table">
+            <tr>
+                <th style="text-align: center;">Resistor</th>
+                <th style="text-align: center;">Victus</th>
+                <th style="text-align: center;">Segfault</th>
+            </tr>
+            <tr>
+                <th style="text-align: center;" id="risl">none</th>
+                <th style="text-align: center;" id="vcnl">0</th>
+                <th style="text-align: center;" id="sgl">no</th>
+            </tr>
+        </table>
+    </div>
+</div>
+    
+<br  style="clear: both !important;">
+
+<div id="c67">
+<div class="card" style="width: 400px !important;" id="resis">
+	<h2 style="color: black !important; font-size: 30px !important">Syphon Resistor</h2>
+	
+	<ul class="ul-fff">
+        <li class="li-fff">
+            <form style="float: left !important">
+                <input id="ris" required='' type='number' max="2">
+                <label alt='Amount' placeholder='Resistor Amount'></label>
+            </form>
+			<div class="check"></div>
+		</li>
+	</ul>
+</div>
+    
+<div class="card" style="width: 400px !important; float: left !important;">
+	<h2 style="color: black !important; font-size: 30px !important">Commander</h2>
+	
+	<ul class="ul-fff">
+        <li class="li-fff">
+			<label class="switch" style="float: left !important; margin-right: 30px">
+                <input id="vnb" type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <form style="float: left !important">
+                <input id="vn" required='' type='number' max="100">
+                <label alt='Victus Noir max 100' placeholder='Victus Level'></label>
+            </form>
+			<div class="check"></div>
+		</li>
+	</ul>
+</div>
+<div id="segfault" class="card" style="width: 400px !important; float: left !important;">
+	<h2 style="color: black !important; font-size: 30px !important">Segfault</h2>
+	
+	<ul class="ul-fff">
+        <li class="li-fff">
+			<label class="switch" style="float: left !important; margin-right: 30px">
+                <input id="sgb" type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <form style="float: left !important">
+                <input id="sg" required='' type='number' max="100">
+                <label alt='MKs range from 1 - 6' placeholder='MK'></label>
+            </form>
+			<div class="check"></div>
+		</li>
+	</ul>
+</div>
+</div>
+
+<br  style="clear: both !important;">
+
+<div id="report" class="card">
+	<ul class="ul-fff">
+		<li class="li-fff1">
+            <div onclick="main()" class="btn-fff" style="float: left; margin-right: 5px; margin-bottom: 5px">Go</div>
+            <div onclick="main()" class="btn-fff2"></div>
+            <div onclick="comp()" class="btn-fff" style="float: left">Add</div>
+            <div onclick="comp()" class="btn-fff2"></div>
+            <div onclick="reset()" class="btn-fff" style="float: right">Reset All</div>
+            <div onclick="reset()" class="btn-fff2"></div>
+            <div onclick="resetinp()" class="btn-fff" style="float: right; margin-right: 5px; margin-bottom: 5px">Reset Input</div>
+            <div onclick="resetinp()" class="btn-fff2"></div>
+        </li>
+	</ul>
+</div> 
+
+<div id="comp1" class="card" style="float: left;">
+	<span><h2 style="color: black !important; font-size: 30px !important; float: left;">Build A</h2>
+    <div style="float: right;">
+    <div onclick="reset1()" class="btn-fff" style="float: right">Reset</div>
+    <div onclick="reset1()" class="btn-fff2"></div></div></span>
+    
+	<ul class="ul-fff">
+		<li class="li-fff1">
+            <table style="margin-bottom: 20px;">
+                <tr>
+                    <th style="color: #c23b3b">Screens</th>
+                    <th></th>
+                    <th style="color: #c23b3b">Armor</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="scr1-compa">0</td>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="ar1-compa">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 2</td>
+                    <td id="scr2-compa">0</td>
+                    <td style="font-weight: bold">Level 2</td>
+                    <td id="ar2-compa">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 3</td>
+                    <td id="scr3-compa">0</td>
+                    <td style="font-weight: bold">Level 3</td>
+                    <td id="ar3-compa">0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight: bold">Level 4</td>
+                    <td id="ar4-compa">0</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+                
+                <tr>
+                    <th style="color: #c23b3b">Munition</th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level</td>
+                    <td id="mun-compa">none</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <th style="color: #c23b3b">PCR</th>
+                    <th></th>
+                    <th style="color: #c23b3b">PDB</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="pcr1-compa">0</td>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="pdb1-compa">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 2</td>
+                    <td id="pcr2-compa">0</td>
+                    <td style="font-weight: bold">Level 2</td>
+                    <td id="pdb2-compa">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 3</td>
+                    <td id="pcr3-compa">0</td>
+                    <td style="font-weight: bold">Level 3</td>
+                    <td id="pdb3-compa">0</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+                
+                <tr>
+                    <th style="color: #c23b3b">Victus</th>
+                    <th></th>
+                    <th style="color: #c23b3b">Segfault</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level</td>
+                    <td id="vic-compa">0</td>
+                    <td style="font-weight: bold">MK</td>
+                    <td id="seg-compa">none</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+                 <tr>
+                    <th style="color: #c23b3b">Siphon Resistor</th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="ris-compa">none</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Screenenergy</th>
+                    <th>Bonus</th>
+                    <th>Total</th>
+                </tr> 
+                <tr>
+                    <td id="demo" class="td-fff">0</td>
+                    <td id="demo1" class="td-fff">0%</td>
+                    <td id="demo2" class="td-fff">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Visible for:</td>
+                    <td style="font-weight: bold">Phased for:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="demo3" class="td-fff" style="font-weight: bold; color: firebrick; font-size: 25px;">always</td>
+                    <td id="demo4" class="td-fff" style="font-weight: bold; color: firebrick; font-size: 25px;">never</td>
+                    <td></td>
+                </tr>
+            </table>
+        </li>
+	</ul>
+</div> 
+
+<div id="comp2" class="card" style="float: left;">
+	<span><h2 style="color: black !important; font-size: 30px !important; float: left;">Build B</h2>
+    <div style="float: right;">
+    <div onclick="reset2()" class="btn-fff" style="float: right">Reset</div>
+    <div onclick="reset2()" class="btn-fff2"></div></div></span>
+    
+	<ul class="ul-fff">
+		<li class="li-fff1">
+            <table style="margin-bottom: 20px;">
+                  <tr>
+                    <th style="color: #c23b3b">Screens</th>
+                    <th></th>
+                    <th style="color: #c23b3b">Armor</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="scr1-compb">0</td>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="ar1-compb">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 2</td>
+                    <td id="scr2-compb">0</td>
+                    <td style="font-weight: bold">Level 2</td>
+                    <td id="ar2-compb">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 3</td>
+                    <td id="scr3-compb">0</td>
+                    <td style="font-weight: bold">Level 3</td>
+                    <td id="ar3-compb">0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight: bold">Level 4</td>
+                    <td id="ar4-compb">0</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+                
+                <tr>
+                    <th style="color: #c23b3b">Munition</th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level</td>
+                    <td id="mun-compb">none</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <th style="color: #c23b3b">PCR</th>
+                    <th></th>
+                    <th style="color: #c23b3b">PDB</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="pcr1-compb">0</td>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="pdb1-compb">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 2</td>
+                    <td id="pcr2-compb">0</td>
+                    <td style="font-weight: bold">Level 2</td>
+                    <td id="pdb2-compb">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 3</td>
+                    <td id="pcr3-compb">0</td>
+                    <td style="font-weight: bold">Level 3</td>
+                    <td id="pdb3-compb">0</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+                
+                <tr>
+                    <th style="color: #c23b3b">Victus</th>
+                    <th></th>
+                    <th style="color: #c23b3b">Segfault</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level</td>
+                    <td id="vic-compb">0</td>
+                    <td style="font-weight: bold">MK</td>
+                    <td id="seg-compb">none</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+                <tr>
+                    <th style="color: #c23b3b">Siphon Resistor</th>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Level 1</td>
+                    <td id="ris-compb">none</td>
+                </tr>
+                <tr>
+                    <td class="td-comp">&nbsp;</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Screenenergy</th>
+                    <th>Bonus</th>
+                    <th>Total</th>
+                </tr> 
+                <tr>
+                    <td id="demo5" class="td-fff">0</td>
+                    <td id="demo6" class="td-fff">0%</td>
+                    <td id="demo7" class="td-fff">0</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">Visible for:</td>
+                    <td style="font-weight: bold">Phased for:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="demo8" class="td-fff" style="font-weight: bold; color: firebrick; font-size: 25px;"> always</td>
+                    <td id="demo9" class="td-fff" style="font-weight: bold; color: firebrick; font-size: 25px;">never</td>
+                    <td></td>
+                </tr>
+            </table>
+        </li>
+	</ul>
+</div> 
+    
+<script> 
+function saac() {
+  var c12f = document.getElementById("c12");
+  if (c12f.style.display === "block") {
+    c12f.style.display = "none";
+  } else {
+    c12f.style.display = "block";
+  }
+}
+function amc() {
+  var anthraf = document.getElementById("anthra");
+  if (anthraf.style.display === "block") {
+    anthraf.style.display = "none";
+  } else {
+    anthraf.style.display = "block";
+  }
+}
+function pcrpdb() {
+  var c45f = document.getElementById("c45");
+  if (c45f.style.display === "block") {
+    c45f.style.display = "none";
+  } else {
+    c45f.style.display = "block";
+  }
+}
+function spec() {
+  var c67f = document.getElementById("c67");
+  if (c67f.style.display === "block") {
+    c67f.style.display = "none";
+  } else {
+    c67f.style.display = "block";
+  }
+}
+
+function resetinp(){
+    document.getElementById("scr1").value = "";
+    document.getElementById("scr2").value = "";
+    document.getElementById("scr3").value = "";
+    document.getElementById("nod1").value = "";
+    document.getElementById("nod2").value = "";
+    document.getElementById("nod3").value = "";
+    document.getElementById("am").value = "";
+    document.getElementById("nod4").value = "";
+    document.getElementById("pcr1").value = "";
+    document.getElementById("pdb1").value = "";
+    document.getElementById("vn").value = "";
+    document.getElementById("sg").value = "";
+    document.getElementById("pcr2").value = "";
+    document.getElementById("pdb2").value = "";
+    document.getElementById("pcr3").value = "";
+    document.getElementById("pdb3").value = "";
+    document.getElementById("ris").value = "";
+    document.getElementById("sgb").checked = false; //level of the anthracite munition (box)
+    document.getElementById("vnb").checked = false; //level of Victus Noir (box)
+    
+    document.getElementById("scrl1").innerHTML = "0";
+    document.getElementById("scrl2").innerHTML = "0";
+    document.getElementById("scrl3").innerHTML = "0";
+    document.getElementById("arl1").innerHTML = "0";
+    document.getElementById("arl2").innerHTML = "0";
+    document.getElementById("arl3").innerHTML = "0";
+    document.getElementById("arl4").innerHTML = "0";
+    
+    document.getElementById("antrl").innerHTML = "none";
+    document.getElementById("risl").innerHTML = "none";
+    
+    document.getElementById("pdbl1").innerHTML = "0";
+    document.getElementById("pdbl2").innerHTML = "0";
+    document.getElementById("pdbl3").innerHTML = "0";
+    document.getElementById("pcrl1").innerHTML = "0";
+    document.getElementById("pcrl2").innerHTML = "0";
+    document.getElementById("pcrl3").innerHTML = "0";
+    
+    document.getElementById("sgl").innerHTML = "no";
+    document.getElementById("vcnl").innerHTML = "no";
+    
+}
+function reset() {
+    
+    document.getElementById("scr1").value = "";
+    document.getElementById("scr2").value = "";
+    document.getElementById("scr3").value = "";
+    document.getElementById("nod1").value = "";
+    document.getElementById("nod2").value = "";
+    document.getElementById("nod3").value = "";
+    document.getElementById("am").value = "";
+    document.getElementById("nod4").value = "";
+    document.getElementById("pcr1").value = "";
+    document.getElementById("pdb1").value = "";
+    document.getElementById("vn").value = "";
+    document.getElementById("sg").value = "";
+    document.getElementById("pcr2").value = "";
+    document.getElementById("pdb2").value = "";
+    document.getElementById("pcr3").value = "";
+    document.getElementById("pdb3").value = "";
+    document.getElementById("ris").value = "";
+    document.getElementById("sgb").checked = false; //level of the anthracite munition (box)
+    document.getElementById("vnb").checked = false; //level of Victus Noir (box)
+    
+    document.getElementById("scrl1").innerHTML = "0";
+    document.getElementById("scrl2").innerHTML = "0";
+    document.getElementById("scrl3").innerHTML = "0";
+    document.getElementById("arl1").innerHTML = "0";
+    document.getElementById("arl2").innerHTML = "0";
+    document.getElementById("arl3").innerHTML = "0";
+    document.getElementById("arl4").innerHTML = "0";
+    
+    document.getElementById("antrl").innerHTML = "none";
+    document.getElementById("risl").innerHTML = "none";
+    
+    document.getElementById("pdbl1").innerHTML = "0";
+    document.getElementById("pdbl2").innerHTML = "0";
+    document.getElementById("pdbl3").innerHTML = "0";
+    document.getElementById("pcrl1").innerHTML = "0";
+    document.getElementById("pcrl2").innerHTML = "0";
+    document.getElementById("pcrl3").innerHTML = "0";
+    
+    document.getElementById("sgl").innerHTML = "no";
+    document.getElementById("vcnl").innerHTML = "no";
+    
+
+
+    document.getElementById("scr1-compa").innerHTML = "0";
+    document.getElementById("scr2-compa").innerHTML = "0";
+    document.getElementById("scr3-compa").innerHTML = "0";
+    document.getElementById("ar1-compa").innerHTML = "0";
+    document.getElementById("ar2-compa").innerHTML = "0";
+    document.getElementById("ar3-compa").innerHTML = "0";
+    document.getElementById("ar4-compa").innerHTML = "0";
+
+    document.getElementById("scr1-compb").innerHTML = "0";
+    document.getElementById("scr2-compb").innerHTML = "0";
+    document.getElementById("scr3-compb").innerHTML = "0";
+    document.getElementById("ar1-compb").innerHTML = "0";
+    document.getElementById("ar2-compb").innerHTML = "0";
+    document.getElementById("ar3-compb").innerHTML = "0";
+    document.getElementById("ar4-compb").innerHTML = "0";
+
+    document.getElementById("mun-compa").innerHTML = "none";
+    document.getElementById("mun-compb").innerHTML = "none";
+
+    document.getElementById("pdb1-compa").innerHTML = "0";
+    document.getElementById("pdb2-compa").innerHTML = "0";
+    document.getElementById("pdb3-compa").innerHTML = "0";
+    document.getElementById("pcr1-compa").innerHTML = "0";
+    document.getElementById("pcr2-compa").innerHTML = "0";
+    document.getElementById("pcr3-compa").innerHTML = "0";
+
+    document.getElementById("pdb1-compb").innerHTML = "0";
+    document.getElementById("pdb2-compb").innerHTML = "0";
+    document.getElementById("pdb3-compb").innerHTML = "0";
+    document.getElementById("pcr1-compb").innerHTML = "0";
+    document.getElementById("pcr2-compb").innerHTML = "0";
+    document.getElementById("pcr3-compb").innerHTML = "0";
+
+    document.getElementById("seg-compa").innerHTML = "no";
+    document.getElementById("vic-compa").innerHTML = "0";
+    document.getElementById("seg-compb").innerHTML = "none";
+    document.getElementById("vic-compb").innerHTML = "0";
+    document.getElementById("ris-compa").innerHTML = "none";
+    document.getElementById("ris-compb").innerHTML = "none";
+    
+
+    
+    document.getElementById("demo").innerHTML = "0";
+    document.getElementById("demo1").innerHTML = "0 %";
+    document.getElementById("demo2").innerHTML = "0";
+    document.getElementById("demo3").innerHTML = "always";
+    document.getElementById("demo4").innerHTML = "never";
+    
+    document.getElementById("demo5").innerHTML = "0";
+    document.getElementById("demo6").innerHTML = "0 %";
+    document.getElementById("demo7").innerHTML = "0";
+    document.getElementById("demo8").innerHTML = "always";
+    document.getElementById("demo9").innerHTML = "never";
+    
+    document.getElementById("compa-stat").innerHTML = 1;
+    document.getElementById("compb-stat").innerHTML = 1;
+}
+    
+function reset1() {
+
+    document.getElementById("scr1-compa").innerHTML = "0";
+    document.getElementById("scr2-compa").innerHTML = "0";
+    document.getElementById("scr3-compa").innerHTML = "0";
+    document.getElementById("ar1-compa").innerHTML = "0";
+    document.getElementById("ar2-compa").innerHTML = "0";
+    document.getElementById("ar3-compa").innerHTML = "0";
+    document.getElementById("ar4-compa").innerHTML = "0";
+
+    document.getElementById("mun-compa").innerHTML = "none";
+
+    document.getElementById("pdb1-compa").innerHTML = "0";
+    document.getElementById("pdb2-compa").innerHTML = "0";
+    document.getElementById("pdb3-compa").innerHTML = "0";
+    document.getElementById("pcr1-compa").innerHTML = "0";
+    document.getElementById("pcr2-compa").innerHTML = "0";
+    document.getElementById("pcr3-compa").innerHTML = "0";
+
+    document.getElementById("seg-compa").innerHTML = "none";
+    document.getElementById("vic-compa").innerHTML = "0";
+    document.getElementById("ris-compa").innerHTML = "none";
+
+    
+    document.getElementById("demo").innerHTML = "0";
+    document.getElementById("demo1").innerHTML = "0 %";
+    document.getElementById("demo2").innerHTML = "0";
+    document.getElementById("demo3").innerHTML = "always";
+    document.getElementById("demo4").innerHTML = "never";
+    
+    document.getElementById("compa-stat").innerHTML = 0;
+}
+function reset2() {
+
+    document.getElementById("scr1-compb").innerHTML = "0";
+    document.getElementById("scr2-compb").innerHTML = "0";
+    document.getElementById("scr3-compb").innerHTML = "0";
+    document.getElementById("ar1-compb").innerHTML = "0";
+    document.getElementById("ar2-compb").innerHTML = "0";
+    document.getElementById("ar3-compb").innerHTML = "0";
+    document.getElementById("ar4-compb").innerHTML = "0";
+
+    document.getElementById("mun-compb").innerHTML = "none";
+
+    document.getElementById("pdb1-compb").innerHTML = "0";
+    document.getElementById("pdb2-compb").innerHTML = "0";
+    document.getElementById("pdb3-compb").innerHTML = "0";
+    document.getElementById("pcr1-compb").innerHTML = "0";
+    document.getElementById("pcr2-compb").innerHTML = "0";
+    document.getElementById("pcr3-compb").innerHTML = "0";
+
+    document.getElementById("seg-compb").innerHTML = "none";
+    document.getElementById("vic-compb").innerHTML = "0";
+    document.getElementById("ris-compb").innerHTML = "none";
+    
+    document.getElementById("demo5").innerHTML = "0";
+    document.getElementById("demo6").innerHTML = "0 %";
+    document.getElementById("demo7").innerHTML = "0";
+    document.getElementById("demo8").innerHTML = "always";
+    document.getElementById("demo9").innerHTML = "never";
+    
+    document.getElementById("compb-stat").innerHTML = 0;
+}
+
+function comp() {
+ 
+    var x = [];
+    x[0] = parseFloat(document.getElementById("scr1").value);//Sreens 1
+    x[1] = parseFloat(document.getElementById("scr2").value);//...2
+    x[2] = parseFloat(document.getElementById("scr3").value);//...3
+    x[3] = parseFloat(document.getElementById("nod1").value);//Node 1
+    x[4] = parseFloat(document.getElementById("nod2").value);//...2
+    x[5] = parseFloat(document.getElementById("nod3").value);//...3
+    x[6] = parseFloat(document.getElementById("am").value);//Anthracite Munition
+    x[7] = parseFloat(document.getElementById("nod4").value);//Node 4
+    x[8] = parseFloat(document.getElementById("pcr1").value);//Phase Charge Relay lvl 1
+    x[9] = parseFloat(document.getElementById("pdb1").value);//Phase Drain Buffer lvl 1
+    x[10] = parseFloat(document.getElementById("vn").value);//Victus Noir
+    x[11] = parseFloat(document.getElementById("sg").value);//Segfault
+    x[12] = parseFloat(document.getElementById("pcr2").value);//PCR lvl 2
+    x[13] = parseFloat(document.getElementById("pdb2").value);//PDB lvl 2
+    x[14] = parseFloat(document.getElementById("pcr3").value);//PCR lvl 3
+    x[15] = parseFloat(document.getElementById("pdb3").value);//PDB lvl 3
+    var a = document.getElementById("two").checked; //level of the anthracite munition (box)
+    var vic = document.getElementById("vnb").checked; //level of Victus Noir (box)
+    var seg = document.getElementById("sgb").checked; //MK of Segfault (box)
+    var rs = parseFloat(document.getElementById("ris").value);
+    var res = [];
+    var k = 0;
+    var s = 1;    //munition
+    var ch = 0;   //drain buffer charge
+    var dr = 0;   //drain buffer drain
+    var ch1 = 1;  //charge relai charge
+    var dr1 = 1;  //charge relai drain
+    var vics = 0; //victus screen
+    var vicsc = 0;//victus screen charge
+    var seg1 = 0;
+    
+    var cmpsta = document.getElementById("compa-stat").innerText;
+    var cmpstb = document.getElementById("compb-stat").innerText;
+ 
+    core: {
+        if (isNaN(x[0])) { x[0] = 0;document.getElementById("scr1").value = "";k++;}
+        if (isNaN(x[1])) { x[1] = 0;document.getElementById("scr2").value = "";k++;} 
+        if (isNaN(x[2])) { x[2] = 0;document.getElementById("scr3").value = "";k++;}
+        if (isNaN(x[3])) { x[3] = 0;document.getElementById("nod1").value = "";}
+        if (isNaN(x[4])) { x[4] = 0;document.getElementById("nod2").value = "";}
+        if (isNaN(x[5])) { x[5] = 0;document.getElementById("nod3").value = "";}
+        if (isNaN(x[6])) { x[6] = 0;document.getElementById("am").value = "";}
+        if (isNaN(x[7])) { x[7] = 0;document.getElementById("nod4").value = "";}
+        if (isNaN(x[8])) { x[8] = 0;document.getElementById("pcr1").value = "";}
+        if (isNaN(x[9])) { x[9]= 0;document.getElementById("pdb1").value = "";}
+        if (isNaN(x[10])){ x[10]= 0;document.getElementById("vn").value = "";}
+        if (isNaN(x[11])){ x[11]= 0;document.getElementById("sg").value = "";}
+        if (isNaN(x[12])){ x[12]= 0;document.getElementById("pcr2").value = "";}
+        if (isNaN(x[13])){ x[13]= 0;document.getElementById("pdb2").value = "";}
+        if (isNaN(x[14])){ x[14]= 0;document.getElementById("pcr3").value = "";}
+        if (isNaN(x[15])){ x[15]= 0;document.getElementById("pdb3").value = "";}
+        if (isNaN(rs)){ rs= 0;document.getElementById("ris").value = "";}
+
+        
+        if (x[0] > 4) { x[0] = 4; document.getElementById("scr1").value = 4;} 
+        if (x[1] > 4) { x[1] = 4; document.getElementById("scr2").value = 4;} 
+        if (x[2] > 4) { x[2] = 4; document.getElementById("scr3").value = 4;}
+        if (x[3] > 4) { x[3] = 4; document.getElementById("nod1").value = 4;}
+        if (x[4] > 4) { x[4] = 4; document.getElementById("nod2").value = 4;}
+        if (x[5] > 4) { x[5] = 4; document.getElementById("nod3").value = 4;}
+        if (x[6] > 3) { x[6] = 3; document.getElementById("am").value = 3;}
+        if (x[7] > 4) { x[7] = 4; document.getElementById("nod4").value = 4;}
+        if (x[8] > 3) { x[8] = 3; document.getElementById("pcr1").value = 3;}
+        if (x[9] > 3) { x[9] = 3; document.getElementById("pdb1").value = 3;}
+        if (x[10] > 100) { x[10] = 100; document.getElementById("vn").value = 100;}
+        if (x[11] > 6) { x[11] = 6; document.getElementById("vn").value = 6;}
+        if (x[12] > 4){ x[12]= 4;document.getElementById("pcr2").value = 4;}
+        if (x[13] > 4){ x[13]= 4;document.getElementById("pdb2").value = 4;}
+        if (x[14] > 4){ x[14]= 4;document.getElementById("pcr3").value = 4;}
+        if (x[15] > 4){ x[15]= 4;document.getElementById("pdb3").value = 4;}
+        if (rs > 2){ rs= 2;document.getElementById("ris").value = 2;}
+        
+        if (k/3 == 1){break core;}
+   
+        if ( a == true) {
+            if (x[6] == 1) {s = 0.92;}
+            if (x[6] == 2) {s = 0.88;}
+            if (x[6] == 3) {s = 0.84;}
+            if (isNaN(x[6])) { s = 1; document.getElementById("am").value = ""; }
+        }
+        
+        if (x[8] != 0 || x[12] != 0 || x[14] != 0) {
+            ch1 = (x[8] * 0.12 + x[12] * 0.16 + x[14] * 0.2)+1;
+            dr1 = (x[8] * 0.06 + x[12] * 0.09 + x[14] * 0.11)+1;
+        }
+        else {ch1 = 1; dr1 = 1;}
+        
+        if (x[9] != 0 || x[13] != 0 || x[15] != 0) {
+            ch = (x[9] * 0.08 + x[13] * 0.11 + x[15] * 0.14);
+            dr = (x[9] * 0.05 + x[13] * 0.07 + x[15] * 0.09);
+        }
+        else {ch = 0; dr = 0;}
+        
+        if ( vic == true) {
+            if (x[10] <= 10 && x[10] >= 1)  {vics = ((36.6666666666666666 * x[10]) + 63.666666666666666); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 20 && x[10] >= 10) {vics = ((35 * x[10]) + 80); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 30 && x[10] >= 20) {vics = 39 * x[10]; vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 40 && x[10] >= 30) {vics = ((43 * x[10]) - 120); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 50 && x[10] >= 40) {vics = ((50 * x[10]) - 400); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 60 && x[10] >= 50) {vics = ((65 * x[10]) - 1150); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 70 && x[10] >= 60) {vics = ((95 * x[10]) - 2950); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 80 && x[10] >= 70) {vics = ((152 * x[10]) - 6940); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 90 && x[10] >= 80) {vics = ((266 * x[10]) - 16060); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 100 && x[10] >= 90){vics = ((506 * x[10]) - 37660); vicsc = Math.trunc(vics/10);}
+            if (isNaN(x[10])) { vics = 0; vicsc = 0; document.getElementById("vn").value = ""; }
+        }
+        if ( seg == true) {
+            if (x[11] == 1) {seg1 = 0.25;}
+            if (x[11] == 2) {seg1 = 0.4;}
+            if (x[11] == 3) {seg1 = 0.55;}
+            if (x[11] == 4) {seg1 = 0.7;}
+            if (x[11] == 5) {seg1 = 0.85;}
+            if (x[11] == 6) {seg1 = 1;}
+            if (isNaN(x[11])) { seg1 = 0; document.getElementById("sg").value = ""; }
+        }
+
+        res[0] = x[0] * Number(6150) + x[1] * Number(8000) + x[2] * Number(9900) + vics;//Energy
+        res[1] = x[3] * Number(1/10) + x[4] * Number(0.15) + x[5] * Number(0.2) + x[7] * Number(0.2) + seg1;//Bonus
+        res[2] = res[1] * Number(100);
+        res[3] = res[0] * (1 + res[1]);
+        res[4] = res[3]/((( x[0] * Number(1025) + x[1] * Number(1335) + x[2] * Number(1650) + vicsc) * s)*(ch1 - ch));//Charge
+        res[5] = res[3]/(( x[0] * Number(615) + x[1] * Number(800) + x[2] * Number(990))*(dr1 - dr + (rs * 0.1)));//Drain
+    }
+    
+
+    end: {
+
+    if (cmpsta == "1" && cmpstb == "1") {document.getElementById("compa-stat").innerHTML = "0"; document.getElementById("compb-stat").innerHTML = "0";}
+        
+    if (cmpsta == "0" && isNaN(res[4]) == false && res[4] != 0) {
+        document.getElementById("scr1-compa").innerHTML = x[0];
+        document.getElementById("scr2-compa").innerHTML = x[1];
+        document.getElementById("scr3-compa").innerHTML = x[2];
+        document.getElementById("ar1-compa").innerHTML = x[3];
+        document.getElementById("ar2-compa").innerHTML = x[4];
+        document.getElementById("ar3-compa").innerHTML = x[5];
+        document.getElementById("ar4-compa").innerHTML = x[7];
+
+        document.getElementById("mun-compa").innerHTML = x[6];
+        document.getElementById("ris-compa").innerHTML = rs;
+
+        document.getElementById("pdb1-compa").innerHTML = x[9];
+        document.getElementById("pdb2-compa").innerHTML = x[13];
+        document.getElementById("pdb3-compa").innerHTML = x[15];
+        document.getElementById("pcr1-compa").innerHTML = x[8];
+        document.getElementById("pcr2-compa").innerHTML = x[12];
+        document.getElementById("pcr3-compa").innerHTML = x[14];
+
+        document.getElementById("seg-compa").innerHTML = x[11];
+        document.getElementById("vic-compa").innerHTML = x[10];
+        
+        if (isNaN(res[4])) { document.getElementById("demo3").innerHTML = "always";}
+        else {document.getElementById("demo3").innerHTML = (res[4]).toFixed(1) + " " + "seconds";}
+    
+        if (isNaN(res[5])) { document.getElementById("demo4").innerHTML = "never";}
+        else {document.getElementById("demo4").innerHTML = (res[5]).toFixed(1) + " " + "seconds";}
+        
+        if (isNaN(res[0])) { res[0] = 0;}
+        if (isNaN(res[2])) { res[2] = 0;} 
+        if (isNaN(res[3])) { res[3] = 0;}
+        
+        document.getElementById("demo").innerHTML = Math.round(res[0]);
+        document.getElementById("demo1").innerHTML = Math.round(res[2]) + "%";
+        document.getElementById("demo2").innerHTML = Math.round(res[3]);
+        
+        document.getElementById("compa-stat").innerHTML = "1";
+        break end;
+    }
+
+    if (cmpstb == "0" && isNaN(res[4]) == false && res[4] != 0) {
+
+        document.getElementById("scr1-compb").innerHTML = x[0];
+        document.getElementById("scr2-compb").innerHTML = x[1];
+        document.getElementById("scr3-compb").innerHTML = x[2];
+        document.getElementById("ar1-compb").innerHTML = x[3];
+        document.getElementById("ar2-compb").innerHTML = x[4];
+        document.getElementById("ar3-compb").innerHTML = x[5];
+        document.getElementById("ar4-compb").innerHTML = x[7];
+
+        document.getElementById("mun-compb").innerHTML = x[6];
+        document.getElementById("ris-compb").innerHTML = rs;
+
+        document.getElementById("pdb1-compb").innerHTML = x[9];
+        document.getElementById("pdb2-compb").innerHTML = x[13];
+        document.getElementById("pdb3-compb").innerHTML = x[15];
+        document.getElementById("pcr1-compb").innerHTML = x[8];
+        document.getElementById("pcr2-compb").innerHTML = x[12];
+        document.getElementById("pcr3-compb").innerHTML = x[14];
+
+        document.getElementById("seg-compb").innerHTML = x[11];
+        document.getElementById("vic-compb").innerHTML = x[10];
+        
+        if (isNaN(res[4])) { document.getElementById("demo8").innerHTML = "always";}
+        else {document.getElementById("demo8").innerHTML = (res[4]).toFixed(1) + " " + "seconds";}
+    
+        if (isNaN(res[5])) { document.getElementById("demo9").innerHTML = "never";}
+        else {document.getElementById("demo9").innerHTML = (res[5]).toFixed(1) + " " + "seconds";}
+        
+        if (isNaN(res[0])) { res[0] = 0;}
+        if (isNaN(res[2])) { res[2] = 0;} 
+        if (isNaN(res[3])) { res[3] = 0;}
+        
+        document.getElementById("demo5").innerHTML = Math.round(res[0]);
+        document.getElementById("demo6").innerHTML = Math.round(res[2]) + "%";
+        document.getElementById("demo7").innerHTML = Math.round(res[3]);
+        
+        document.getElementById("compb-stat").innerHTML = "1";
+    }
+    }
+}
+    
+function main() {
+ 
+    var x = [];
+    x[0] = parseFloat(document.getElementById("scr1").value);//Sreens 1
+    x[1] = parseFloat(document.getElementById("scr2").value);//...2
+    x[2] = parseFloat(document.getElementById("scr3").value);//...3
+    x[3] = parseFloat(document.getElementById("nod1").value);//Node 1
+    x[4] = parseFloat(document.getElementById("nod2").value);//...2
+    x[5] = parseFloat(document.getElementById("nod3").value);//...3
+    x[6] = parseFloat(document.getElementById("am").value);//Anthracite Munition
+    x[7] = parseFloat(document.getElementById("nod4").value);//Node 4
+    x[8] = parseFloat(document.getElementById("pcr1").value);//Phase Charge Relay lvl 1
+    x[9] = parseFloat(document.getElementById("pdb1").value);//Phase Drain Buffer lvl 1
+    x[10] = parseFloat(document.getElementById("vn").value);//Victus Noir
+    x[11] = parseFloat(document.getElementById("sg").value);//Segfault
+    x[12] = parseFloat(document.getElementById("pcr2").value);//PCR lvl 2
+    x[13] = parseFloat(document.getElementById("pdb2").value);//PDB lvl 2
+    x[14] = parseFloat(document.getElementById("pcr3").value);//PCR lvl 3
+    x[15] = parseFloat(document.getElementById("pdb3").value);//PDB lvl 3
+    var a = document.getElementById("two").checked; //level of the anthracite munition (box)
+    var vic = document.getElementById("vnb").checked; //level of Victus Noir (box)
+    var seg = document.getElementById("sgb").checked; //MK of Segfault (box)
+    var rs = document.getElementById("ris").value; //MK of Segfault (box)
+    var res = [];
+    var k = 0;
+    var s = 1;    //munition
+    var ch = 0;   //drain buffer charge
+    var dr = 0;   //drain buffer drain
+    var ch1 = 1;  //charge relai charge
+    var dr1 = 1;  //charge relai drain
+    var vics = 0; //victus screen
+    var vicsc = 0;//victus screen charge
+    var seg1 = 0;
+ 
+    core: {
+        if (isNaN(x[0])) { x[0] = 0;document.getElementById("scr1").value = "";k++;}
+        if (isNaN(x[1])) { x[1] = 0;document.getElementById("scr2").value = "";k++;} 
+        if (isNaN(x[2])) { x[2] = 0;document.getElementById("scr3").value = "";k++;}
+        if (isNaN(x[3])) { x[3] = 0;document.getElementById("nod1").value = "";}
+        if (isNaN(x[4])) { x[4] = 0;document.getElementById("nod2").value = "";}
+        if (isNaN(x[5])) { x[5] = 0;document.getElementById("nod3").value = "";}
+        if (isNaN(x[6])) { x[6] = 0;document.getElementById("am").value = "";}
+        if (isNaN(x[7])) { x[7] = 0;document.getElementById("nod4").value = "";}
+        if (isNaN(x[8])) { x[8] = 0;document.getElementById("pcr1").value = "";}
+        if (isNaN(x[9])) { x[9]= 0;document.getElementById("pdb1").value = "";}
+        if (isNaN(x[10])){ x[10]= 0;document.getElementById("vn").value = "";}
+        if (isNaN(x[11])){ x[11]= 0;document.getElementById("sg").value = "";}
+        if (isNaN(x[12])){ x[12]= 0;document.getElementById("pcr2").value = "";}
+        if (isNaN(x[13])){ x[13]= 0;document.getElementById("pdb2").value = "";}
+        if (isNaN(x[14])){ x[14]= 0;document.getElementById("pcr3").value = "";}
+        if (isNaN(x[15])){ x[15]= 0;document.getElementById("pdb3").value = "";}
+        if (isNaN(x[16])){ x[16]= 0;document.getElementById("ris").value = "";}
+
+        
+        if (x[0] > 4) { x[0] = 4; document.getElementById("scr1").value = 4;} 
+        if (x[1] > 4) { x[1] = 4; document.getElementById("scr2").value = 4;} 
+        if (x[2] > 4) { x[2] = 4; document.getElementById("scr3").value = 4;}
+        if (x[3] > 4) { x[3] = 4; document.getElementById("nod1").value = 4;}
+        if (x[4] > 4) { x[4] = 4; document.getElementById("nod2").value = 4;}
+        if (x[5] > 4) { x[5] = 4; document.getElementById("nod3").value = 4;}
+        if (x[6] > 3) { x[6] = 3; document.getElementById("am").value = 3;}
+        if (x[7] > 4) { x[7] = 4; document.getElementById("nod4").value = 4;}
+        if (x[8] > 3) { x[8] = 3; document.getElementById("pcr1").value = 3;}
+        if (x[9] > 3) { x[9] = 3; document.getElementById("pdb1").value = 3;}
+        if (x[10] > 100) { x[10] = 100; document.getElementById("vn").value = 100;}
+        if (x[11] > 6) { x[11] = 6; document.getElementById("vn").value = 6;}
+        if (x[12] > 4){ x[12]= 4;document.getElementById("pcr2").value = 4;}
+        if (x[13] > 4){ x[13]= 4;document.getElementById("pdb2").value = 4;}
+        if (x[14] > 4){ x[14]= 4;document.getElementById("pcr3").value = 4;}
+        if (x[15] > 4){ x[15]= 4;document.getElementById("pdb3").value = 4;}
+        if (x[16] > 2){ x[16]= 2;document.getElementById("ris").value = 2;}
+        if (k/3 == 1){break core;}
+   
+        if ( a == true) {
+            if (x[6] == 1) {s = 0.92;}
+            if (x[6] == 2) {s = 0.88;}
+            if (x[6] == 3) {s = 0.84;}
+            if (isNaN(x[6])) { s = 1; document.getElementById("am").value = ""; }
+        }
+        
+        if (x[8] != 0 || x[12] != 0 || x[14] != 0) {
+            ch1 = (x[8] * 0.12 + x[12] * 0.16 + x[14] * 0.2)+1;
+            dr1 = (x[8] * 0.06 + x[12] * 0.09 + x[14] * 0.11)+1;
+        }
+        else {ch1 = 1; dr1 = 1;}
+        
+        if (x[9] != 0 || x[13] != 0 || x[15] != 0) {
+            ch = (x[9] * 0.08 + x[13] * 0.11 + x[15] * 0.14);
+            dr = (x[9] * 0.05 + x[13] * 0.07 + x[15] * 0.09);
+        }
+        else {ch = 0; dr = 0;}
+        
+        if ( vic == true) {
+            if (x[10] <= 10 && x[10] >= 1)  {vics = ((36.6666666666666666 * x[10]) + 63.666666666666666); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 20 && x[10] >= 10) {vics = ((35 * x[10]) + 80); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 30 && x[10] >= 20) {vics = 39 * x[10]; vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 40 && x[10] >= 30) {vics = ((43 * x[10]) - 120); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 50 && x[10] >= 40) {vics = ((50 * x[10]) - 400); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 60 && x[10] >= 50) {vics = ((65 * x[10]) - 1150); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 70 && x[10] >= 60) {vics = ((95 * x[10]) - 2950); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 80 && x[10] >= 70) {vics = ((152 * x[10]) - 6940); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 90 && x[10] >= 80) {vics = ((266 * x[10]) - 16060); vicsc = Math.trunc(vics/10);}
+            if (x[10] <= 100 && x[10] >= 90){vics = ((506 * x[10]) - 37660); vicsc = Math.trunc(vics/10);}
+            if (isNaN(x[10])) { vics = 0; vicsc = 0; document.getElementById("vn").value = ""; }
+        }
+        if ( seg == true) {
+            if (x[11] == 1) {seg1 = 0.25;}
+            if (x[11] == 2) {seg1 = 0.4;}
+            if (x[11] == 3) {seg1 = 0.55;}
+            if (x[11] == 4) {seg1 = 0.7;}
+            if (x[11] == 5) {seg1 = 0.85;}
+            if (x[11] == 6) {seg1 = 1;}
+            if (isNaN(x[11])) { seg1 = 0; document.getElementById("sg").value = ""; }
+        }
+
+        res[0] = x[0] * Number(6150) + x[1] * Number(8000) + x[2] * Number(9900) + vics;//Energy
+        res[1] = x[3] * Number(1/10) + x[4] * Number(0.15) + x[5] * Number(0.2) + x[7] * Number(0.2) + seg1;//Bonus
+        res[2] = res[1] * Number(100);
+        res[3] = res[0] * (1 + res[1]);
+        res[4] = res[3]/((( x[0] * Number(1025) + x[1] * Number(1335) + x[2] * Number(1650) + vicsc) * s)*(ch1 - ch));//Charge
+        res[5] = res[3]/(( x[0] * Number(615) + x[1] * Number(800) + x[2] * Number(990))*(dr1 - dr + (rs * 0.1)));//Drain
+    }
+    
+
+    end: {
+            
+        document.getElementById("scr1-compa").innerHTML = x[0];
+        document.getElementById("scr2-compa").innerHTML = x[1];
+        document.getElementById("scr3-compa").innerHTML = x[2];
+        document.getElementById("ar1-compa").innerHTML = x[3];
+        document.getElementById("ar2-compa").innerHTML = x[4];
+        document.getElementById("ar3-compa").innerHTML = x[5];
+        document.getElementById("ar4-compa").innerHTML = x[7];
+
+        document.getElementById("mun-compa").innerHTML = x[6];
+        document.getElementById("ris-compa").innerHTML = rs;
+
+        document.getElementById("pdb1-compa").innerHTML = x[9];
+        document.getElementById("pdb2-compa").innerHTML = x[13];
+        document.getElementById("pdb3-compa").innerHTML = x[15];
+        document.getElementById("pcr1-compa").innerHTML = x[8];
+        document.getElementById("pcr2-compa").innerHTML = x[12];
+        document.getElementById("pcr3-compa").innerHTML = x[14];
+
+        document.getElementById("seg-compa").innerHTML = x[11];
+        document.getElementById("vic-compa").innerHTML = x[10];
+        
+        if (isNaN(res[4])) { document.getElementById("demo3").innerHTML = "always";}
+        else {document.getElementById("demo3").innerHTML = (res[4]).toFixed(1) + " " + "seconds";}
+    
+        if (isNaN(res[5])) { document.getElementById("demo4").innerHTML = "never";}
+        else {document.getElementById("demo4").innerHTML = (res[5]).toFixed(1) + " " + "seconds";}
+        
+        if (isNaN(res[0])) { res[0] = 0;}
+        if (isNaN(res[2])) { res[2] = 0;} 
+        if (isNaN(res[3])) { res[3] = 0;}
+        
+        document.getElementById("demo").innerHTML = Math.round(res[0]);
+        document.getElementById("demo1").innerHTML = Math.round(res[2]) + "%";
+        document.getElementById("demo2").innerHTML = Math.round(res[3]);
+        
+        document.getElementById("compa-stat").innerHTML = "1";
+    }
+
+}
+    
+
+</script> 
+   
+</body>
+</html> 
