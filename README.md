@@ -1,3 +1,4 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 # Invi-calc
 
 Don't judge the code, I always only expanded it and never cared enough to actually FIX it :p
